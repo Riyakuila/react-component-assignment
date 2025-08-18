@@ -17,6 +17,7 @@ This project is a **React-based component development assignment** using **TypeS
 npm install
 ```
 ### Run Locally
+```sh
 # Start development server
 npm run dev
 ```
