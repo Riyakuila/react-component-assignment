@@ -6,6 +6,7 @@ interface ButtonProps {
   disabled?: boolean;
   type?: "button" | "submit";
   className?: string;
+  label?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({

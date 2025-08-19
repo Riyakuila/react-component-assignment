@@ -7,13 +7,11 @@ interface User {
   role: string;
 }
 
-const Dashboard: React.FC = () => {
-  const [data] = useState<User[]>([
-    { id: 1, name: "Riya", email: "riya@example.com", role: "Admin" },
-    { id: 2, name: "Bob", email: "bob@example.com", role: "Moderator" },
-    { id: 3, name: "Charlie", email: "charlie@example.com", role: "User" },
-    { id: 4, name: "Alice", email: "alice@example.com", role: "User" },
-  ]);
+interface DashboardProps {
+  data: User[];
+}
+
+const Dashboard: React.FC<DashboardProps> = ({ data }) => {
   const [selectedIds, setSelectedIds] = useState<number[]>([]);
 
   const handleCheckboxChange = (id: number) => {
